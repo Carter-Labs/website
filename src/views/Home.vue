@@ -1,13 +1,15 @@
 <template>
   <div class="home">
+    <ProjectCard></ProjectCard>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
 
 export default {
   name: 'home',
+  components: [ProjectCard]
 }
 </script>
