@@ -1,33 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <Navigation></Navigation>
+    <div id="content">
+      <router-view/>
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+// @ is an alias to /src
+import Navigation from '@/components/Navigation'
+
+export default {
+  name: 'App',
+  components: {
+    Navigation
+  }
+}
+</script>
+
 <style lang="scss">
+html, body{
+  margin: 0
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#content {
+  margin: 0 4%
 }
 .card{
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
