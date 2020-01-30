@@ -1,5 +1,5 @@
 <template>
- <form class="card email" accept-charset="utf-8" :action="EmailAction">
+ <form class="card email" accept-charset="utf-8" :action="EmailAction" method="POST">
   <h1>Contact Us</h1>
   <div class="form-group">
     <label for="name">Name</label>
@@ -30,7 +30,7 @@ export default {
   },
   computed: {
     EmailAction: () => {
-      return 'https://formspree.io/test@test.com'
+      return 'https://formspree.io/contact@carterlabs.dev'
     }
   }
 }
